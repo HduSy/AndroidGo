@@ -1,0 +1,2 @@
+include ':app', ':expandablelistviewtest', ':adapterviewflipper', ':recyclerviewtest'
+rootProject.name='MainActivity'
