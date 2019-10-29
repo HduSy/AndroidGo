@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gender_name_list">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="gender_value_list">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="light_strength_list">
+        <item>强度1</item>
+        <item>强度2</item>
+        <item>强度3</item>
+    </string-array>
+    <string-array name="light_value_list">
+        <item>强度1</item>
+        <item>强度2</item>
+        <item>强度3</item>
+    </string-array>
+</resources>

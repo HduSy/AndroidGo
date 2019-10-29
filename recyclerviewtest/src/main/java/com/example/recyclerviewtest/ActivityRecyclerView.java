@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//TODO: 偶尔闪退问题
 public class ActivityRecyclerView extends AppCompatActivity {
 	private RecyclerView recyclerView;
 	private List<Person> personList = new ArrayList<>();
@@ -78,12 +78,29 @@ public class ActivityRecyclerView extends AppCompatActivity {
 		 * @param itemView
 		 * @param adapter
 		 */
-		public PersonViewHolder(@NonNull View itemView, RecyclerView.Adapter adapter) {
+		public PersonViewHolder(@NonNull View itemView, final RecyclerView.Adapter adapter) {
 			super(itemView);
 			this.nameTv = itemView.findViewById(R.id.name);
 			this.descTv = itemView.findViewById(R.id.desc);
 			this.iv = itemView.findViewById(R.id.header);
 			this.rootView = itemView.findViewById(R.id.rootview);
+			rootView.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					int i = (int) (Math.random() * (personList.size() + 1));
+					Person person = new Person(personList.get(i).header, personList.get(i).name, personList.get(i).desc);
+					adapter.notifyItemChanged(2);
+					personList.add(2, person);
+					adapter.notifyItemRangeChanged(2, adapter.getItemCount());
+				}
+			});
+			rootView.setOnLongClickListener(new View.OnLongClickListener() {
+				@Override
+				public boolean onLongClick(View v) {
+
+					return false;
+				}
+			});
 			this.adapter = adapter;
 		}
 	}

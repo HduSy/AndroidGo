@@ -1,2 +1,2 @@
-include ':app', ':expandablelistviewtest', ':adapterviewflipper', ':recyclerviewtest'
+include ':app', ':expandablelistviewtest', ':adapterviewflipper', ':recyclerviewtest', ':viewswitcher', ':eventlistenertest', ':preferenceactivitytest', ':fragmenttest', ':actioncategorytest', ':chapter8', ':chapter7', ':chapter9', ':chapter10', ':mvplearning'
 rootProject.name='MainActivity'

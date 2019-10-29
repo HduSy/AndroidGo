@@ -50,15 +50,18 @@ public class ActivityAdapterViewFlipper extends AppCompatActivity {
 		};
 		avf.setAdapter(baseAdapter);
 	}
-	public void prev(View v){
+
+	public void prev(View v) {
 		avf.showPrevious();
 		avf.stopFlipping();
 	}
-	public void next(View v){
+
+	public void next(View v) {
 		avf.showNext();
 		avf.stopFlipping();
 	}
-	public void auto(View v){
+
+	public void auto(View v) {
 		avf.startFlipping();
 	}
 }
